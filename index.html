@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .form-container {
+      max-width: 400px;
+      margin-top: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+    .visible {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contacts App</h1>
+  <div id="main-page" class="visible">
+    <button id="create-button">Create Contact</button>
+    <table id="contacts-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Contacts will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+  <div id="create-page" class="hidden">
+    <h2>Create Contact</h2>
+    <form id="contact-form" class="form-container">
+      <label for="first-name">First Name:</label><br>
+      <input type="text" id="first-name" required><br><br>
+      <label for="last-name">Last Name:</label><br>
+      <input type="text" id="last-name" required><br><br>
+      <label for="phone-number">Phone Number:</label><br>
+      <input type="text" id="phone-number" required><br><br>
+      <button type="submit">Save Contact</button>
+      <button type="button" id="cancel-button">Cancel</button>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
